@@ -2,8 +2,7 @@ package org.example.web.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import org.example.web.domain.posts.Posts;
-
+import org.example.domain.posts.Posts;
 @Getter
 public class PostsResponseDto {
 

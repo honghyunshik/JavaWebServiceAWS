@@ -1,8 +1,9 @@
-package org.example.web.domain.posts;
+package org.example.domain.posts;
 
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
@@ -10,8 +11,8 @@ import javax.persistence.*;
 @NoArgsConstructor      //기본 생성자 자동 추가
 @Entity     //테이블과 링크될 클래스임을 나타낸다
 //클래스의 카멜케이스 이름(ex - SalesManager.java) <-> 테이블의 언더스코어 네이밍(ex - sales_manager table) 매칭
-//Enity 클래스에서는 Setter 메소드를 만들지 않는다. 생성자를 통해 값을 채우며, 값 변경이 필요할 경우 해당 이벤트에 맞는 public 메소드를 호출하여 변경.
-public class Posts{
+//Entity 클래스에서는 Setter 메소드를 만들지 않는다. 생성자를 통해 값을 채우며, 값 변경이 필요할 경우 해당 이벤트에 맞는 public 메소드를 호출하여 변경.
+public class Posts extends BaseTimeEntity {
 
     @Id     //해당 테이블의 PK 필드를 나타냄
     @GeneratedValue(strategy = GenerationType.IDENTITY)     //PK의 생성 규칙을 나타냄. IDENTITY는 기본키 생성을 DB에 위임

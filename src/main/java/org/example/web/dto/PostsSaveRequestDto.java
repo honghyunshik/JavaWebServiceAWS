@@ -4,8 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.example.web.domain.posts.Posts;
-
+import org.example.domain.posts.Posts;
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {

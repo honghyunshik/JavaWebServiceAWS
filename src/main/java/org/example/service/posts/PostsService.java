@@ -1,8 +1,8 @@
 package org.example.service.posts;
 
 import lombok.RequiredArgsConstructor;
+import org.example.domain.posts.Posts;
 import org.example.domain.posts.PostsRepository;
-import org.example.web.domain.posts.Posts;
 import org.example.web.dto.PostsResponseDto;
 import org.example.web.dto.PostsSaveRequestDto;
 import org.example.web.dto.PostsUpdateRequestDto;
