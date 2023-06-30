@@ -2,9 +2,11 @@ package org.example.config.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.example.domain.user.Role;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.client.userinfo.CustomUserTypesOAuth2UserService;
 
 @RequiredArgsConstructor
@@ -12,6 +14,11 @@ import org.springframework.security.oauth2.client.userinfo.CustomUserTypesOAuth2
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final CustomOAuth2UserService customOAuth2UserService;
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception{

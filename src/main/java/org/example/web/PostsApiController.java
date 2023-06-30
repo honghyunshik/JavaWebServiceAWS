@@ -15,7 +15,7 @@ public class PostsApiController {
     //생성(Create)
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto postsSaveRequestDto){
-        return postsService.save(postsSaveRequestDto);
+        return postsService.save(postsSave  RequestDto);
     }
 
     //변경(Update)
